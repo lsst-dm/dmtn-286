@@ -1,4 +1,4 @@
-\documentclass[DM,authoryear,toc]{lsstdoc}
+\documentclass[DM,lsstdraft,authoryear,toc]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
@@ -35,19 +35,16 @@ We have a lot of fairly open communication channels which should not receive ima
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{William O'Mullane}
+  \addtohist{1}{2024-03-06}{Unreleased.}{William O'Mullane}
 }
 
 
 \begin{document}
 
-% Create the title page.
-\maketitle
-% Frequently for a technote we do not want a title page  uncomment this to remove the title page and changelog.
-% use \mkshorttitle to remove the extra pages
+\mkshorttitle
 
-% ADD CONTENT HERE
-% You can also use the \input command to include several content files.
+
+\input{body}
 
 \appendix
 % Include all the relevant bib files.
