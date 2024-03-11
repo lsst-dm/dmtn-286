@@ -44,10 +44,22 @@ Resurrect or create an new Slack org for restricted use of the Rubin team, at le
 We could revisit after commissioning.
 See also \secref{sec:genpol}.
 
-\subsection{technotes on lsst.io}
+Alternatively - do not post pixel images on Slack - only use links to secured sources.
+Would people support this ? We could allow screen grabs of Ghosts or other artifacts esp as they would have no location information.
 
-\subsection{github }
-(e.g., draft technotes, Construction paper drafts, notebooks with plots)
+\subsection{technotes on lsst.io}
+The lsst.io site is intentionally public.
+Some notes could get auth protection for some time - not sure of feasibility by end 2024.
+
+
+\subsection{Github }
+There may be many things in repos in github e.g., draft technotes, Construction paper drafts, notebooks with plots.
+These need to be in private repos.
+Even so private repos are visible to all team members on github so care needs to be taken.
+\subsubsection{Proposed policy for Github}
+Rendered notebooks containing image data must not appear in public repos.
+Notebooks, papers etc with pixel data should only appear in \emph{private SITCOM} repos.
+The github SITCOM team members need to be continuously and carefully aligned with actual commissioning team membership.
 
 \subsection{Confluence}
 Much of confluence is public (all of DM is public by choice).
@@ -55,17 +67,41 @@ SITCOM is restricted to login but not more than that.
 The main area where one may expect to see images would be performance analysis - an admittedly  cursory glance at all attachments suggests there are not many.
 There are many links to notebooks - this is fine as notebooks require execution/access.
 
-\subsubsection{Proposed policy}
+\subsubsection{Proposed policy for Confluence}
 Do not up load any pixel images or parts of pixel images or screenshots of images to confluence.
 Use an authenticated link to any image rather than the actual image if it is needed in a page.
 
 
-
 \subsection{Jira}
+As for confluence all DM tickets are public in Jira.
+Other projects are password protected but anyone with access to Jira may view such tickets.
+Its not obvious we could even secure such a system.
+
+\subsubsection{Proposed policy for Jira}
+Do not up load any pixel images or parts of pixel images to Jira.
+Use an authenticated link to any image rather than the actual image if it is needed in a ticket.
+It is acceptable to put a screenshot of an effect on a CCD if it is pertinent to the issue.
+Such a screen grab should be no more than a quarter of  one full CCD image in size and the total images on a ticket should not accumulate to more than one CCD in size.
+
 \subsection{summit tooling (i.e RubinTV)}
-\subsubsection{Proposed policy}
+This all has to be secured for commissioning use.
+We should aim to put this in place around ComCam on sky July 2024.
+
+\subsubsection{Proposed policy for summit tooling}
 Summit tooling needs to go behind the Summit 2FA VPN which is in place as of March 6.
 RubinTV needs to have authentication added and be restricted to the same Summit IPA groups.
 
 \subsection{USDF tooling}
-\subsection{email lists }
+USDF tooling should only be accessible to USDF account holders who are in the commissioning or operations teams.
+\subsubsection{Proposed policy for USDF tooling}
+Ensure only account holders in allowed groups have access to USDF tooling.
+Allowed groups are those involved in commissioning plus DM and SP staff involved in QA and essential operations trouble shooting at USDF.
+
+\subsection{Emails and email  lists }
+Email is inherently insecure (few of us use encryption) and list servers are fairly open.
+
+\subsubsection{Proposed policy for Email}
+Do not attach Rubin pixel images or parts of image to emails.
+Use authenticated links to images where needed.
+
+
