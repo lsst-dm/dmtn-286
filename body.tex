@@ -5,6 +5,7 @@ As outlined in \citeds{DMTN-199} only the Rubin team have access to pixel data f
 Below secure or authenticated links to images are mentioned.
 These could be any pointer to a image which one can only access by login - hence verifying one has access to the image. Examples could be a butler dataId, a jupyter notebook to be run at USDF, an unsigned S3 URL\footnote{starting with s3:// but not usable in a browser}.
 
+
 \section{General policy} \label{sec:genpol}
 Many scenarios are discussed in \citeds{SITCOMTN-076} concerning information sharing in commissioning.
 In general we may state:
@@ -15,6 +16,11 @@ Images should not be shown in in presentations.
 
 
 This is even more important before first light where we need to carefully control the public first light images.
+
+In general we are trying to maintain a broadly open system for Rubin.
+This implies team members and collaborators, aside pixel data, have access a wealth of information about Rubin.
+During commission much of this information will be about problems - we do not wish to hide the issues and problems but
+we expect the community to be respectfully of this information they may see in jira tickets and confluence.
 
 \section {Systems that need policies}
 In various discussions the list of tools we need to have polices for are:
@@ -35,13 +41,15 @@ Tech notes and Slack are possibly most heavily used so lets start there.
 
 \input{slack}
 
-\subsection{technotes on lsst.io}
+\subsection{Technotes on lsst.io}
 The lsst.io site is intentionally public.
-Some notes could get auth protection for some time - not sure of feasibility by end 2024.
 
-If we can not make lsst.io authenticated - private repos with PDF in the repo may be alternative (this was done for DMTN-199 when it was private)
+Getting auth protection for some notes for some time is not very consistent and will lead to problems.
 
 \citeds{SITCOMTN-076} goes in more detail on technotes.
+\subsubsection{Proposed policy for technotes}
+Continue current default of public technotes with development occurring on branches. The review process described in \citeds{SITCOMTN-076} occurs at the stage that a development branch is being merged to the main branch via a Pull Request. The content of a technote is considered to be approved for release, once merged to the main branch.
+During development, embargoed pixel images can only be referenced in technotes as authenticated links – pixel-level images (e.g., Pigs) must NOT appear in technotes until specifically approved for release
 
 
 \subsection{Github }
@@ -53,8 +61,7 @@ An alternative would be again use authenticated links to images until they are n
 
 \subsubsection{Proposed policy for Github}
 Rendered notebooks containing image data must not appear in public repos.
-Notebooks, papers etc with pixel data should only appear in \emph{private SITCOM} repos.
-The github SITCOM team members need to be continuously and carefully aligned with actual commissioning team membership.
+Notebooks should be linked via Timesquare where authentication.
 
 \subsection{Confluence}
 Much of confluence is public (all of DM is public by choice).
