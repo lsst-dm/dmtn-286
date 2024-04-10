@@ -1,26 +1,24 @@
 
 \section{Introduction}
-As outlined in \citeds{DMTN-199} only the Rubin team have access to pixel data for an embargo period of 80 hours and thirty days during commissioning. We assume this also means PNG or other format images captured from screens etc which may show pixel data e.g. from RubinTV on the summit.
+As outlined in \citeds{DMTN-199} only the Rubin team have access to pixel data for an embargo period of 80 hours in operations and 30 days during commissioning. We assume this also means PNG or other format images captured from screens, etc., which may show pixel data, e.g., from RubinTV on the summit.
 
-Below secure or authenticated links to images are mentioned.
-These could be any pointer to a image which one can only access by login - hence verifying one has access to the image. Examples could be a butler dataId, a jupyter notebook to be run at USDF, an unsigned S3 URL\footnote{starting with s3:// but not usable in a browser}.
-
+Secure or authenticated links to pixel images are mentioned in several instances below.
+These could be any pointer to an image which one can only access by login - hence verifying one has access to the image. Examples could be a butler dataId, a jupyter notebook to be run at USDF, an unsigned S3 URL\footnote{starting with s3:// but not usable in a browser}.
 
 \section{General policy} \label{sec:genpol}
 Many scenarios are discussed in \citeds{SITCOMTN-076} concerning information sharing in commissioning.
 In general we may state:
 
-No images seen by the team in any communication space should be shared outside the space at anytime.
+No pixel images seen by the team in any communication space should be shared outside the space at anytime.
 Images should not be left open on laptops at meetings or public spaces.
 Images should not be shown in in presentations.
 
+This is even more important before System First Light where we need to carefully control the public first light images.
 
-This is even more important before first light where we need to carefully control the public first light images.
-
-In general we are trying to maintain a broadly open system for Rubin.
-This implies team members and collaborators, aside from pixel data, have access a wealth of other information about Rubin.
-During commission much of this information will be about problems - we do not wish to hide the issues and problems but
-we expect the community to be respectfully of this information and the state of the system, which in commissioning is not finished.
+In general, we are trying to maintain a broadly open system for Rubin.
+This implies that team members and collaborators have access to a wealth of other information about Rubin, aside from pixel data.
+During commission, much of this information will be about problems.
+We do not wish to hide the issues and problems, and we expect the community to be respectful of this information and consider the state of the system, which in commissioning is not finished.
 
 \section {Systems that need policies}
 In various discussions the list of tools we need to have polices for are:
@@ -47,37 +45,34 @@ The lsst.io site is intentionally public.
 Getting auth protection for some notes for some time is not very consistent and will lead to problems.
 
 \citeds{SITCOMTN-076} goes in more detail on technotes.
+
 \subsubsection{Proposed policy for technotes}
 Continue current default of public technotes with development occurring on branches. The review process described in \citeds{SITCOMTN-076} occurs at the stage that a development branch is being merged to the main branch via a Pull Request. The content of a technote is considered to be approved for release, once merged to the main branch.
-During development, embargoed pixel images can only be referenced in technotes as authenticated links – pixel-level images (e.g., Pigs) must NOT appear in technotes until specifically approved for release
+During development, embargoed pixel images can only be referenced in technotes as authenticated links --- pixel images (e.g., PNGs) must NOT appear in technotes until specifically approved for release
 
+\subsection{Github}
+There may be many things in repos in github, e.g., draft technotes, Construction paper drafts, notebooks with plots.
+These could be in private repos.
+Even so, private repos are visible to all team members on github so care needs to be taken.
 
-\subsection{Github }
-There may be many things in repos in github e.g., draft technotes, Construction paper drafts, notebooks with plots.
-These need to be in private repos.
-Even so private repos are visible to all team members on github so care needs to be taken.
-
-An alternative would be again use authenticated links to images until they are not embargoed and keep all notes public.
+An alternative would be to again use authenticated links to images until they are not embargoed and keep all notes public.
 
 \subsubsection{Proposed policy for Github}
 Rendered notebooks containing image data must not appear in public repos.
-Notebooks should be linked via Timesquare where authentication.
+Notebooks should be linked via Timesquare with authenticated access.
 
 \subsection{Confluence}
-Much of confluence is public (all of DM is public by choice).
+Much of Confluence is public (all of DM is public by choice).
 SITCOM is restricted to login but not more than that.
-The main area where one may expect to see images would be performance analysis - an admittedly  cursory glance at all attachments suggests there are not many.
-There are many links to notebooks - this is fine as notebooks require execution/access.
+The main area where one may expect to see images would be performance analysis --- an admittedly cursory glance at all attachments suggests there are not many.
+There are many links to notebooks --- this is fine as notebooks require execution/access.
 
-SITCOM would like a confluence space where they could share presentations with potentially embargoed images.
+SITCOM would like a Confluence space where they could share presentations with potentially embargoed images.
 This could be allowed by making all such meeting pages private and ensuring the SITCOM group is appropriately restricted.
 
 \subsubsection{Proposed policy for Confluence}
 Do not up load any pixel images or parts of pixel images or screenshots of images to confluence.
 Use an authenticated link to any image rather than the actual image if it is needed in a page.
-
-
-
 
 \subsection{Jira}
 As for confluence all DM tickets are public in Jira.
@@ -95,7 +90,7 @@ This all has to be secured for commissioning use.
 We should aim to put this in place around ComCam on sky July 2024.
 
 \subsubsection{Proposed policy for summit tooling}
-Summit tooling needs to go behind the Summit 2FA VPN which is in place as of March 6.
+Summit tooling needs to go behind the Summit 2FA VPN which is in place as of 6 March 2024.
 RubinTV needs to have authentication added and be restricted to the same Summit IPA groups.
 
 \subsection{USDF tooling}
