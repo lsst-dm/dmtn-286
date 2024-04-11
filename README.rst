@@ -10,7 +10,9 @@ Data security for Rubin communication channels
 DMTN-286
 ========
 
-We have a lot of fairly open communication channels which should not receive image data during embargo periods. This is more of a dilemma  in commissioning with the longer embargo period but persists throughout operations. This note discusses the issue and draws some conclusions.
+We have a lot of fairly open communication channels which should not receive image data during embargo periods. 
+This is more of a dilemma  in commissioning with the longer embargo period but persists throughout operations. 
+This note discusses the issue and draws some conclusions.
 
 Links
 =====
