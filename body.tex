@@ -4,10 +4,11 @@ The briefest summary of this topic is that images during the embargo period and 
 That space needs to be set up and even there some care should be taken.
 
 As outlined in \citeds{DMTN-199} only the Rubin team have access to pixel data for an embargo period of 80 hours in operations and 30 days during commissioning. We assume this also means PNG or other format images captured from screens, etc., which may show pixel data, e.g., from RubinTV on the summit.
-Catalog data is not embargoed though falls under data rights restrictions \citeds{RDO-013}.
+In this document we use the term ``image representation'' to describe these kinds of images, to distinguish them from image data (in FITS files or provided by the butler).
+Catalog data is not embargoed but falls under data rights restrictions \citeds{RDO-013}.
 
 Secure or authenticated links to pixel images are mentioned in several instances below.
-These could be any pointer to an image which one can only access by login - hence verifying one has access to the image. Examples could be a butler dataId, a jupyter notebook to be run at USDF, an unsigned S3 URL\footnote{starting with s3:// but not usable in a browser}.
+These could be any pointer to an image or image representation which one can only access by login - hence verifying one has access to the image. Examples could be a butler dataId, a jupyter notebook to be run at USDF, an unsigned S3 URL\footnote{starting with s3:// but not usable in a browser}.
 
 
 \section{General policy} \label{sec:genpol}
@@ -16,16 +17,19 @@ This document describes policy implementation for a concrete set of tools.
 In general we may state:
 
 \begin{itemize}
-\item No pixel images seen by the team in any communication space should be shared outside the space at anytime.
-\item Images should not be left open on laptops at meetings or public spaces.
-\item Images should not be shown in presentations.
+\item Proprietary data products from commissioning, including all focal plane scientific data, may NOT be shared beyond the Rubin team until their release as part of the Early Science Program. This includes all embargoed images and data products.
+\item Pixel data is not to be retained more than incidentally/temporarily on non-embargo storage, including personal/work laptops/desktops and USDF home/shared/scratch directories.
+\item Image representations should not be left open on laptops at meetings or public spaces.
+\item Image representations should not be shown in presentations outside of Rubin meetings or communication channels (such as Rubin Slack, see below).
+\item No image representations seen by the team in any communication space should be shared outside of the Rubin communication channels at anytime.
 \end{itemize}
 
-This is even more important before System First Light where we need to carefully control the public first light images.
+
+This is even more important before System First Light where we need to carefully control the public first light images and their representations.
 
 In general, we are trying to maintain a broadly open system for Rubin.
 This implies that team members and collaborators have access to a wealth of other information about Rubin, aside from pixel data.
-During commission, much of this information will be about problems.
+During commissioning, much of this information will be about problems.
 We do not wish to hide the issues and problems, and we expect the community to be respectful of this information and consider the state of the system, which in commissioning is not finished.
 
 \section {Systems that need policies}
@@ -34,7 +38,7 @@ In various discussions the list of tools we need to have polices for are:
 \begin{enumerate}
     \item Confluence
     \item Jira
-    \item github (e.g., draft technotes, Construction paper drafts, notebooks with plots)
+    \item GitHub (e.g., draft technotes, Construction paper drafts, notebooks with plots)
     \item technotes on lsst.io
     \item Slack
     \item summit tooling (i.e RubinTV)
@@ -45,7 +49,7 @@ In various discussions the list of tools we need to have polices for are:
 \end{enumerate}
 
 We discuss each in a section below.
-Tech notes and Slack are possibly most heavily used so lets start there.
+Tech notes and Slack are possibly most heavily used so let's start there.
 
 \input{slack}
 
@@ -58,16 +62,16 @@ Getting auth protection for some notes for some time is not very consistent and 
 
 \subsubsection{Proposed policy for technotes}
 Continue current default of public technotes with development occurring on branches. The review process described in \citeds{SITCOMTN-076} occurs at the stage that a development branch is being merged to the main branch via a Pull Request. The content of a technote is considered to be approved for release, once merged to the main branch.
-During development, embargoed pixel images can only be referenced in technotes as authenticated links --- pixel images (e.g., PNGs) must NOT appear in technotes until specifically approved for release
+During development, embargoed pixel images can only be referenced in technotes as authenticated links --- pixel image representations (e.g., PNGs) must NOT appear in technotes until specifically approved for release.
 
-\subsection{Github}
-There may be many things in repos in github, e.g., draft technotes, Construction paper drafts, notebooks with plots.
+\subsection{GitHub}
+There may be many things in repos in GitHub, e.g., draft technotes, Construction paper drafts, notebooks with plots.
 These could be in private repos.
-Even so, private repos are visible to all team members on github so care needs to be taken.
+Even so, private repos are visible to all team members on GitHub so care needs to be taken.
 
 An alternative would be to again use authenticated links to images until they are not embargoed and keep all notes public.
 
-\subsubsection{Proposed policy for Github}
+\subsubsection{Proposed policy for GitHub}
 Rendered notebooks containing image data must not appear in public repos.
 Notebooks should be linked via Timesquare with authenticated access.
 
@@ -81,7 +85,7 @@ SITCOM would like a Confluence space where they could share presentations with p
 This could be allowed by making all such meeting pages private and ensuring the SITCOM group is appropriately restricted.
 
 \subsubsection{Proposed policy for Confluence}
-Do not up load any pixel images or parts of pixel images or screenshots of images to confluence.
+Do not up load any pixel images or any representations of pixel images or screenshots of images to confluence.
 Use an authenticated link to any image rather than the actual image if it is needed in a page.
 
 \subsection{Jira}
@@ -90,12 +94,12 @@ Other projects are password protected but anyone with access to Jira may view su
 Its not obvious we could even secure such a system.
 
 \subsubsection{Proposed policy for Jira}
-Do not up load any pixel images or parts of pixel images to Jira.
-Use an authenticated link to any image rather than the actual image if it is needed in a ticket.
+Do not up load any pixel images or representations of pixel images to Jira.
+Use an authenticated link to any image rather than a representation of an image if it is needed in a ticket.
 It is acceptable to put a screenshot of an effect on a CCD if it is pertinent to the issue.
 Some details of this type of image data are given in Section 3.4 of \citeds{SITCOMTN-076}.
 
-\subsection{summit tooling (i.e RubinTV)}
+\subsection{Summit Tooling (i.e. RubinTV)}
 This all has to be secured for commissioning use.
 We should aim to put this in place around ComCam on sky July 2024.
 
@@ -109,27 +113,31 @@ USDF tooling should only be accessible to USDF account holders who are in the co
 Ensure only account holders in allowed groups have access to USDF tooling.
 Allowed groups are those involved in commissioning plus DM and SP staff involved in QA and essential operations trouble shooting at USDF.
 
-\subsection{Emails and email  lists }
+\subsection{Emails and email lists}
 Email is inherently insecure (few of us use encryption) and list servers are fairly open.
 
 \subsubsection{Proposed policy for Email}
-Do not attach Rubin pixel images or parts of image to emails.
+Do not attach Rubin pixel images or representations of image to emails.
 Use authenticated links to images where needed.
 
-
-\subsection{ Community.lsst.org}
+\subsection{Community.lsst.org}
 Community is public and completely open.
 \subsubsection{Proposed policy for community}
-Only images already made public via communications should be posted in community.
+Only images or representations already made public via communications should be posted in community.
 Statistical plots to explain issues are ok.
 
-\subsection{ Google and other open editing platforms}
-There are many other ways to share images not mentioned in this document.
+\subsection{Google and other open editing platforms}
+There are many other ways to share representations of images that are not mentioned in this document.
 Images should not be shared {\emph publicly} on any of these including Google, Microsoft360, Dropbox.
-Many of these systems are used in a completely open way with "anyone with link can access" this is not allowable.
+Many of these systems are used in a completely open way with ``anyone with link can access'': this is not allowable.
 
-\subsubsection{Proposed policy for Google and other sites}
-Only images already made public via communications should be posted in publicly accessible locations.
+\subsubsection{Policy for Google and other sites}
+Only representations of images already made public via communications should be posted in publicly accessible locations.
 Statistical plots to explain issues are ok.
-In a limited way it would be acceptable to post images in locked down folders or documents with restricted access to a known group of authenticated individuals.
+In a limited way it is acceptable to post representations of images in locked down folders or documents with restricted access to a known group of authenticated individuals.
+For example, representations of images may be included in a restricted, not world-viewable, Google slide deck, the URL of which may be posted in a Rubin Observatory Slack channel.
+As with the policy for posting image representations to Slack directly: 
+sky position and observation timestamp metadata must not be included; 
+smaller full resolution images showing particular features are fine, as are re-binned larger-field images; 
+metadata values of `day_obs`, `seq_num` and `detector` may be overlaid or otherwise provided.
 
